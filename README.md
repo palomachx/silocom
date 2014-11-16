@@ -1,4 +1,5 @@
-silocom
+Silocom
 =======
 
-Sistema de localización de pistas musicales
+Sistema de Localización de Pistas Musicales
+Por: Paloma Corona Huerta.
