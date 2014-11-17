@@ -1,0 +1,76 @@
+/*
+Author: Paloma Corona Huerta;
+*/
+
+@import url('iconmoon.css');
+
+a {
+	transition: .1s all ease;
+	text-decoration: none !important;
+	color: white !important;
+	font-weight: bold !important;
+}
+
+a:hover {
+	opacity: .8;
+}
+
+body {
+	background: url('../img/fondo.jpg');
+}
+
+#body2 {
+	background: url('../img/back.jpg') !important;
+}
+
+/************************
+	Add Styles to App
+*************************/
+#columnSidebar {
+	position: fixed;
+	height: 100%;
+	z-index: 2;
+	overflow: hidden;
+}
+
+#loginForm {
+	margin-top: 25%;
+}
+
+.panel-inputype {
+	padding-top: 25px;
+}
+
+.panel-inputype input {
+	margin-bottom: 5px;
+}
+
+#copyright {
+	padding-top: 100px;
+	text-align: center;
+}
+
+/************************
+	Custom Styles to Bootstrap
+*************************/
+
+#ulModList li {
+	background: none !important;
+	border: 0 !important;
+}
+
+#ulModList li > a {
+	color: white;
+	text-decoration: none !important;
+	transition: .1s all ease;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#ulModList li > a:hover {
+	opacity: .7;
+}
+
+#ulModList li > a > span {
+	padding-right: 10px;
+}
