@@ -21,26 +21,6 @@
 					<div class="col-lg-10">
 						<span class="icon-list5" style="position: absolute; right: 15px; top: 15px; color: white; font-size: 25px;"></span>
 						
-						<form class="space col-md-6 col-md-offset-3">
-							<input type="text" id="browsersubmit" class="browser col-lg-12" name="browser" placeholder="Buscar música" />
-							<span class="icon-search"></span>
-						</form>
-
-						<table id="allsongs" class="display" cellspacing="0" width="100%">
-							<thead>
-								<tr>
-									<td>ID</td>
-									<td>Nombre</td>
-									<td>Año</td>
-									<td>Duración</td>
-									<td>Disquera</td>
-									<td>Tipo</td>
-									<td>Artista</td>
-									<td>Genero</td>
-								</tr>
-							</thead>
-							<tbody></tbody>
-						</table>
 
 					</div>
 					<div class="col-lg-2" style="position: fixed; right: 0; width: 220px; height: 100%; background: #181D24; box-shadow: inset 3px 0px 10px #0E0E0E;">

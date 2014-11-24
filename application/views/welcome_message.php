@@ -10,9 +10,11 @@
 					<div class="panel panel-default col-lg-8 col-lg-offset-2">
 						<div class="panel-body panel-inputype">
 							<div class="form-group">
+								<label>Nombre de Usuario: </label>
 								<input class="col-lg-12 form-control" id="usuario" name="user" type="text" placeholder="" />
 							</div>
 							<div class="form-group">
+							<label>Contraseña: </label>
 								<input class="col-lg-12 form-control" id="contrasena" name="pass" type="password" placeholder="" />
 							</div>
 							<div class="form-group">

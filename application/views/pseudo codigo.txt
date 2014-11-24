@@ -1,0 +1,18 @@
+
+
+
+
+
+*pseudocódigo para el loggin*
+
+
+
+Introducir usuario
+introducir contraseña
+enviar a comprobacion
+si usuario y la contraseña estan en la DB
+	entonces entrar al dashboard
+de lo contrario 
+	mandar mensaje de error
+termina si
+	finaliza programa.

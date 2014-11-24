@@ -50,6 +50,40 @@ body {
 	text-align: center;
 }
 
+.lidrop a {
+	color: #2E2E2E !important;
+	text-align: center;
+}
+
+.space {
+	margin-top: 20%;
+	position: relative;
+}
+
+.space span {
+	color: white;
+	top: 18px;
+	left: 34px;
+	position: absolute;
+	font-size: 18px;
+}
+
+input.browser {
+	padding: 16px;
+	padding-left: 50px;
+	font-size: 16px;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.05);
+	border: 1px solid rgba(255,255,255,0.3);
+	opacity: .6;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+input.browser:focus {
+	outline: none !important;
+}
+
 /************************
 	Custom Styles to Bootstrap
 *************************/
@@ -73,4 +107,12 @@ body {
 
 #ulModList li > a > span {
 	padding-right: 10px;
+}
+
+.btn-link:hover, .btn-link:focus{
+	color: none;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus{
+	outline: none !important;
 }

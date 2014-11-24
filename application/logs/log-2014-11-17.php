@@ -6225,3 +6225,51 @@ DEBUG - 2014-11-17 03:07:05 --> File loaded: application/views/footer.php
 DEBUG - 2014-11-17 03:07:05 --> File loaded: application/views/dashboard.php
 DEBUG - 2014-11-17 03:07:05 --> Final output sent to browser
 DEBUG - 2014-11-17 03:07:05 --> Total execution time: 0.0390
+DEBUG - 2014-11-17 03:09:35 --> Config Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> Hooks Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> Utf8 Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> UTF-8 Support Enabled
+DEBUG - 2014-11-17 03:09:35 --> URI Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> Router Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> Output Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> Security Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> Input Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> XSS Filtering completed
+DEBUG - 2014-11-17 03:09:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-11-17 03:09:35 --> Language Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> Loader Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> Helper loaded: url_helper
+DEBUG - 2014-11-17 03:09:35 --> Database Driver Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> Session Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> Helper loaded: string_helper
+DEBUG - 2014-11-17 03:09:35 --> Session routines successfully run
+DEBUG - 2014-11-17 03:09:35 --> Controller Class Initialized
+DEBUG - 2014-11-17 03:09:35 --> File loaded: application/views/header2.php
+DEBUG - 2014-11-17 03:09:35 --> File loaded: application/views/footer.php
+DEBUG - 2014-11-17 03:09:35 --> File loaded: application/views/dashboard.php
+DEBUG - 2014-11-17 03:09:35 --> Final output sent to browser
+DEBUG - 2014-11-17 03:09:35 --> Total execution time: 0.0400
+DEBUG - 2014-11-17 03:13:17 --> Config Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> Hooks Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> Utf8 Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> UTF-8 Support Enabled
+DEBUG - 2014-11-17 03:13:17 --> URI Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> Router Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> Output Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> Security Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> Input Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> XSS Filtering completed
+DEBUG - 2014-11-17 03:13:17 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-11-17 03:13:17 --> Language Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> Loader Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> Helper loaded: url_helper
+DEBUG - 2014-11-17 03:13:17 --> Database Driver Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> Session Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> Helper loaded: string_helper
+DEBUG - 2014-11-17 03:13:17 --> Session routines successfully run
+DEBUG - 2014-11-17 03:13:17 --> Controller Class Initialized
+DEBUG - 2014-11-17 03:13:17 --> File loaded: application/views/header2.php
+DEBUG - 2014-11-17 03:13:17 --> File loaded: application/views/footer.php
+DEBUG - 2014-11-17 03:13:17 --> File loaded: application/views/dashboard.php
+DEBUG - 2014-11-17 03:13:17 --> Final output sent to browser
+DEBUG - 2014-11-17 03:13:17 --> Total execution time: 0.0250

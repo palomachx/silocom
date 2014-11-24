@@ -11,8 +11,8 @@ class M_Welcome extends CI_Model {
 		$this->db->where('us_username', $username);
 		$this->db->where('us_password', $password);
 		$query = $this->db->get('USUARIOS');
-		if($query->num_rows() >= 1){
-			return $query->result();
+		if($query->num_rows() == 1){
+			return $query->first_row();
 		}else{
 			return null;
 		}
