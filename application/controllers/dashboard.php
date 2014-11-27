@@ -15,6 +15,7 @@ class Dashboard extends CI_Controller {
 		}
 	}
 
+	/* Se obtienen las canciones */
 	public function getSongs(){
 		$result = $this->m_dashboard->todasCanciones();
 		echo json_encode($result);

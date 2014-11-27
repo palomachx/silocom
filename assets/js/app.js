@@ -46,18 +46,57 @@ $(document).ready(function(){
 	});
 
 
+	var tablasongs = $('#allsongs').DataTable({
+		"language": {
+			"sLengthMenu": "Mostrar _MENU_ registros",
+			"sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros.",
+			"sSearch": "Buscar: ",
+			"oPaginate": {
+				"sFirst": "Primero",
+				"sLast": "Ultimo",
+				"sNext": "Siguiente",
+				"sPrevious" : "Anterior"
+			}
+		}
+	});
+	$('#allsongs')
+		.removeClass( 'display' )
+		.addClass('table table-striped table-bordered table-hover');
+	$.ajax({
+		url: 'dashboard/getSongs',
+		dataType: 'json',
+		type: 'GET',
+		success: function(response){
+			console.log(response);
+			$.each(response, function(i, object){
+				var datos = [];
+				var i = 0;
+				$.each(object, function(key, value){
+					datos[i] = value;
+					i++;
+				});
+				tablasongs.row.add([
+					datos[0],
+					datos[1],
+					datos[2],
+					datos[3],
+					datos[5],
+					datos[6],
+					datos[7],
+					datos[8]
+					]).draw();
+			});
+		}
+	});
+
 	$('#browsersubmit').keydown(function(e){
+
+		var valor = $(this).val(); // Obtengo el valor que contiene el input ;
+		$('#allsongs_filter input').val(valor);
 		if ( e.which == 13 ) {
 	  	e.preventDefault();
 	  }
-		$.ajax({
-			url: 'dashboard/getSongs',
-			type: 'GET',
-			dataType: 'json',
-			success: function(response) {
-				console.log(response);
-			}
-		});
+
 	});
 
 });

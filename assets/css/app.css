@@ -84,6 +84,37 @@ input.browser:focus {
 	outline: none !important;
 }
 
+#allsongs_wrapper {
+	margin-top: 105px;
+}
+
+table#allsongs tbody > tr {
+	font-size: 12px !important;
+}
+
+table#allsongs tbody {
+	background: white;
+}
+
+table#allsongs thead tr > td, table#allsongs tfoot tr > td {
+	background: #EFEFEF;
+	text-align: center;
+	font-weight: 700;
+}
+
+#allsongs_filter label, .dataTables_length label, .dataTables_info {
+	color: #FFF;
+	font-size: 13px;
+}
+
+.paginate_button a {
+	color: #000000 !important;
+}
+
+.paginate_button.active a {
+	color: #FFFFFF !important;
+}
+
 /************************
 	Custom Styles to Bootstrap
 *************************/
