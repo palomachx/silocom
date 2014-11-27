@@ -1,0 +1,118 @@
+/*
+Author: Paloma Corona Huerta;
+*/
+
+@import url('iconmoon.css');
+
+a {
+	transition: .1s all ease;
+	text-decoration: none !important;
+	color: white !important;
+	font-weight: bold !important;
+}
+
+a:hover {
+	opacity: .8;
+}
+
+body {
+	background: url('../img/fondo.jpg');
+}
+
+#body2 {
+	background: url('../img/back.jpg') !important;
+}
+
+/************************
+	Add Styles to App
+*************************/
+#columnSidebar {
+	position: fixed;
+	height: 100%;
+	z-index: 2;
+	overflow: hidden;
+}
+
+#loginForm {
+	margin-top: 25%;
+}
+
+.panel-inputype {
+	padding-top: 25px;
+}
+
+.panel-inputype input {
+	margin-bottom: 5px;
+}
+
+#copyright {
+	padding-top: 100px;
+	text-align: center;
+}
+
+.lidrop a {
+	color: #2E2E2E !important;
+	text-align: center;
+}
+
+.space {
+	margin-top: 20%;
+	position: relative;
+}
+
+.space span {
+	color: white;
+	top: 18px;
+	left: 34px;
+	position: absolute;
+	font-size: 18px;
+}
+
+input.browser {
+	padding: 16px;
+	padding-left: 50px;
+	font-size: 16px;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.05);
+	border: 1px solid rgba(255,255,255,0.3);
+	opacity: .6;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+input.browser:focus {
+	outline: none !important;
+}
+
+/************************
+	Custom Styles to Bootstrap
+*************************/
+
+#ulModList li {
+	background: none !important;
+	border: 0 !important;
+}
+
+#ulModList li > a {
+	color: white;
+	text-decoration: none !important;
+	transition: .1s all ease;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#ulModList li > a:hover {
+	opacity: .7;
+}
+
+#ulModList li > a > span {
+	padding-right: 10px;
+}
+
+.btn-link:hover, .btn-link:focus{
+	color: none;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus{
+	outline: none !important;
+}
