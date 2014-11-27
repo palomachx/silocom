@@ -21,12 +21,12 @@
 					<div class="col-lg-10">
 						<span class="icon-list5" style="position: absolute; right: 15px; top: 15px; color: white; font-size: 25px;"></span>
 						
-						<form class="space col-md-6 col-md-offset-3">
+						<!-- <form class="space col-md-6 col-md-offset-3">
 							<input type="text" id="browsersubmit" class="browser col-lg-12" name="browser" placeholder="Buscar música" />
 							<span class="icon-search"></span>
-						</form>
+						</form> -->
 
-						<table id="allsongs" class="display" cellspacing="0" width="100%">
+						<table id="allsongs" class="table table-striped table-bordered dataTable no-footer" cellspacing="0" width="100%">
 							<thead>
 								<tr>
 									<td>ID</td>
@@ -39,7 +39,21 @@
 									<td>Genero</td>
 								</tr>
 							</thead>
-							<tbody></tbody>
+								
+							<!-- Aqui se genera el contenido -->
+
+							<tfoot>
+								<tr>
+									<td>ID</td>
+									<td>Nombre</td>
+									<td>Año</td>
+									<td>Duración</td>
+									<td>Disquera</td>
+									<td>Tipo</td>
+									<td>Artista</td>
+									<td>Genero</td>
+								</tr>
+							</tfoot>
 						</table>
 
 					</div>
