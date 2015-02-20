@@ -3,3 +3,49 @@
  * E-mail: coderdiaz@gmail.com
  * Project: SILOCOM
  */
+
+body#background {
+	background: url(../img/cover-background.jpg);
+	background-size: cover;
+}
+
+/* Login Panel */
+
+.login-panel {
+	background: #FFFFFF;
+	border-radius: 3px;
+	margin-top: 200px;
+	box-shadow: 0px 3px 5px #221F1F;
+}
+
+.logotype {
+	padding: 25px;
+	background: #F6F5F1;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom: 1px solid #B3B1A8;
+  box-shadow: inset 1px -1px #FFF;
+}
+
+.logotype img {
+	margin-left: 30px;
+}
+
+.form {
+	padding: 50px;
+}
+
+.form form {
+	margin-bottom: 50px;
+
+}
+
+.footpanel {
+	padding: 10px;
+	color: #847021;
+	background: #F6F5F1;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-top: 1px solid #B3B1A8;
+  box-shadow: inset 1px 1px #FFF;
+}
