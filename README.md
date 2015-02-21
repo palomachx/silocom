@@ -13,6 +13,6 @@ Por otra parte, antes de utilizar la aplicación clonada desde este repositorio 
 
 
 ###### Screenshots
-![Login Screen](public/screenshots/loginscreen.png)
+![Login Screen](public/screenshots/loginscreen.tiff)
 
 Copyright (c) 2015 Paloma Corona Huerta
