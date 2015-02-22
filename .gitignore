@@ -1,0 +1,11 @@
+.DS_Store
+public/bower_components/**
+.htaccess
+app/cache/*
+!app/cache/index.html
+!app/cache/.htaccess
+app/logs/*
+!app/logs/index.html
+!app/logs/.htaccess
+app/config/database.php
+app/config/config.php
