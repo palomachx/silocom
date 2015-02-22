@@ -4,48 +4,83 @@
  * Project: SILOCOM
  */
 
+@import url(../bower_components/open-sans-fontface/open-sans.css);
+
 body#background {
-	background: url(../img/cover-background.jpg);
-	background-size: cover;
+	background: #F8F8F8;
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif !important;
+	font-size: 12px;
+} 
+
+a, button {
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
 }
 
 /* Login Panel */
 
-.login-panel {
-	background: #FFFFFF;
-	border-radius: 3px;
-	margin-top: 200px;
-	box-shadow: 0px 3px 5px #221F1F;
+#logtemplate {
+	margin-top: 20%;
 }
 
-.logotype {
-	padding: 25px;
-	background: #F6F5F1;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border-bottom: 1px solid #B3B1A8;
-  box-shadow: inset 1px -1px #FFF;
+.panel-login {
+	padding: 1px 180px 0 25px;
 }
 
-.logotype img {
-	margin-left: 30px;
+.panel-login form input.form-control {
+	border: 1px solid #D0D0D0 !important;
+  box-shadow: 0px 1px 2px #DADADA;
+  padding: 25px;
 }
 
-.form {
-	padding: 50px;
+.title {
+	font-family: 'Open Sans', sans-serif !important;
+	font-weight: 400;
+	font-size: 25px;
 }
 
-.form form {
-	margin-bottom: 50px;
-
+.subtitle {
+	font-family: 'Open Sans', sans-serif !important;
+	font-weight: 300;
+	font-size: 16px;
 }
 
-.footpanel {
-	padding: 10px;
-	color: #847021;
-	background: #F6F5F1;
-	border-bottom-right-radius: 3px;
-	border-bottom-left-radius: 3px;
-	border-top: 1px solid #B3B1A8;
-  box-shadow: inset 1px 1px #FFF;
+.btn-submit:hover {
+	background: #9E1644 !important;
+}
+
+/* Buttons Cleans */
+
+.btn-clean-primary {
+	border: 0 !important;
+  background: #96D492 !important;
+  padding: 15px !important;
+  text-shadow: none !important;
+}
+
+.btn-clean-danger {
+	border: 0 !important;
+	background: #DD433B !important;
+	padding: 15px !important;
+	text-shadow: none !important;
+}
+
+.btn-clean-pink {
+	border: 0 !important;
+	background: #C41E56 !important;
+	padding: 15px !important;
+	text-shadow: none !important;
 }
