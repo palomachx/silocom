@@ -13,10 +13,19 @@ Por otra parte, antes de utilizar la aplicación desde este repositorio es neces
 
 Este proyecto esta desarrollado en el Framework **CodeIgniter** debido a que la curva de aprendizaje del mismo es más corta a diferencia de otros frameworks, posiblemente más adelante, se migre a algún framework más robusto como Symphony o Laravel.
 
+Ademas, es necesario también crear un nuevo archivo y nomrarlo **.htaccess** en el directorio principal, ya que el proyecto utiliza unas reglas para la formación de URL's amigables.
+
+```
+RewriteEngine on
+RewriteCond $1 !^(index\.php|public|robots\.txt)
+RewriteRule ^(.*)$ index.php/$1 [L]
+```
+
 ###### Licencia de Proyecto
 Coming Soon
 
 ###### Screenshots
 Coming Soon
 
-Copyright (c) 2015 Paloma Corona Huerta
+
+Copyright (c) 2015 **Paloma Corona Huerta**
