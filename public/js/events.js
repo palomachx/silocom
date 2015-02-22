@@ -8,4 +8,11 @@ $(function(){
 
 	// Events jQuery
 
+	/* Loading data-slider */
+	$('#progress_song').slider({
+		formatter: function(value) {
+			return 'Current value: ' + value;
+		}
+	});
+
 });
