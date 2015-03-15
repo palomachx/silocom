@@ -15,4 +15,9 @@ $(function(){
 		}
 	});
 
+	$('#form_login').submit(function(e) {
+		e.preventDefault();
+		app.getlogin($(this).serialize());
+	});
+
 });

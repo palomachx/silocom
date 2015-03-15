@@ -39,10 +39,11 @@
 */
 
 $route['default_controller'] = "BaseController";
-$route['404_override'] = 'errors/page_missing';
+$route['404_override'] = '';
+$route['login'] = 'BaseController/login';
 
-#My Functionals Routes 
-$route['dashboard'] = "DashboardController";
+# My Functionals Routes 
+$route['dashboard'] = 'DashboardController';
 
 
 /* End of file routes.php */

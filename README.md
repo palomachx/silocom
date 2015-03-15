@@ -10,6 +10,7 @@ Por otra parte, antes de utilizar la aplicación desde este repositorio es neces
 3. Open Sans FontFace - `bower install open-sans-fontface`.
 4. DataTables Plugin - `bower install DataTables`.
 5. Bootstrap Slider Plugin - `bower install seiyria-bootstrap-slider`.
+6. Sweet Alert for Bootstrap - `bower install boostrap-sweetalert`.
 
 Este proyecto esta desarrollado en el Framework **CodeIgniter** debido a que la curva de aprendizaje del mismo es más corta a diferencia de otros frameworks, posiblemente más adelante, se migre a algún framework más robusto como Symphony o Laravel.
 

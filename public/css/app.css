@@ -131,6 +131,10 @@ a, button {
 	padding-top: 25px;
 }
 
+#errors {
+	margin-top: 82px;
+}
+
 /* Dashboard Style */
 
 .head_title {
@@ -139,6 +143,8 @@ a, button {
 	padding-bottom: 50px;
 	background: #232323;
 	color: #FFFFFF;
+	position: relative;
+  z-index: 2;
 }
 
 .app_name {
@@ -165,12 +171,13 @@ a, button {
 	padding-top: 30px;
 	/* padding-bottom: 0px; */
 	font-weight: 600;
-	font-size: 11px;
+	font-size: 10px;
 	color: #939393;
+	text-transform: uppercase;
 }
 
 .nav_sidebar li a{
-	padding: 10px 35px;
+	padding: 20px 35px;
 	width: 100%;
 	display: block;
 	text-decoration: none !important;
@@ -180,6 +187,7 @@ a, button {
 
 .nav_sidebar li a:hover {
 	opacity: .8;
+	background: #E5E5E5;
 }
 
 .nav_sidebar li a.active {
@@ -216,7 +224,12 @@ a, button {
 .slider-handle {
 	background: #CC215A !important;
 }
+
 /* Buttons Cleans */
+
+.btn {
+	outline: none !important;
+}
 
 .btn-clean-primary {
 	border: 0 !important;
