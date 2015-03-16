@@ -6,18 +6,27 @@
 
 $(function(){
 
-	// Events jQuery
-
-	/* Loading data-slider */
-	$('#progress_song').slider({
-		formatter: function(value) {
-			return 'Current value: ' + value;
-		}
-	});
+	/* Section to Login */
 
 	$('#form_login').submit(function(e) {
 		e.preventDefault();
 		app.getlogin($(this).serialize());
+	});
+
+	/* Section to Singers */
+
+	$('#singers_table').dataTable({
+		/* 'processing': true, */
+		ajax: 'singers/all',
+		columns: [
+			{'data': 'art_id'},
+			{'data': 'art_name'}
+		]
+	});
+
+	$('#singer_registre').on('click', function(e) {
+		e.preventDefault();
+		app.getSingerResponse($('#new_singer').serialize());
 	});
 
 });

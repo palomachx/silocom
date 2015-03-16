@@ -40,12 +40,17 @@ class BaseController extends CI_Controller {
 			$password = sha1($this->input->post('password'));
 			$oauth = $this->BaseModel->oauth($username, $password);
 			if($oauth != false){
+				$data_session = array(
+					'username' => $username,
+					'status' => true,
+				);
+				$this->session->set_userdata($data_session);
 				echo json_encode(array(
-					'username' => $username, 
+					'username' => $username,
 					'status' => true
 					));
 			}else{
-				echo json_encode(array( 
+				echo json_encode(array(
 					'status' => false,
 					'errors' => ''
 					));

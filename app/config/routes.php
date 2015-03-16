@@ -42,8 +42,14 @@ $route['default_controller'] = "BaseController";
 $route['404_override'] = '';
 $route['login'] = 'BaseController/login';
 
-# My Functionals Routes 
+# My Functionals Routes
 $route['dashboard'] = 'DashboardController';
+
+$route['songs'] = 'SongsController';
+
+$route['singers'] = 'SingersController';
+$route['singers/new'] = 'SingersController/newsinger';
+$route['singers/all'] = 'SingersController/getallsingers';
 
 
 /* End of file routes.php */

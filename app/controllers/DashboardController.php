@@ -7,7 +7,11 @@ class DashboardController extends CI_Controller {
 	}
 
 	public function index(){
-		$this->load->view('Dashview');
+		if($this->session->userdata('status') == true){
+			$this->load->view('Dashview');
+		}else{
+			redirect(base_url());
+		}
 	}
 
 }
