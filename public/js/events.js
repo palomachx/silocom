@@ -6,6 +6,8 @@
 
 $(function(){
 
+	app.initialization();
+
 	/* Section to Login */
 
 	$('#form_login').submit(function(e) {
@@ -27,6 +29,27 @@ $(function(){
 	$('#singer_registre').on('click', function(e) {
 		e.preventDefault();
 		app.getSingerResponse($('#new_singer').serialize());
+	});
+
+	/* Section to Songs */
+	$('#songs_table').dataTable({
+		/* 'processing': true, */
+		ajax: 'songs/all',
+		columns: [
+			{'data': 'can_id'},
+			{'data': 'can_name'},
+			{'data': 'can_anno'},
+			{'data': 'can_duracion'},
+			{'data': 'dis_name'},
+			{'data': 'tip_name'},
+			{'data': 'gen_name'},
+			{'data': 'authors'}
+		]
+	});
+
+	$('#song_registre').on('click', function(e){
+		e.preventDefault();
+		app.newSongData();
 	});
 
 });

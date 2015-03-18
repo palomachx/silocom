@@ -5,27 +5,23 @@
   <div class="clearfix"></div>
   <div class="container-fluid left-sidebar">
     <div class="row">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1 class="title-section">Artistas <a href="#!" class="btn-outline" data-toggle="modal" data-target="#newsinger">Nuevo</a></h1>
-            <br />
-            <table id="singers_table" class="display theme-datatable" cellspacing="0" width="100%">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Nombre</th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th>#</th>
-                  <th>Nombre</th>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-        </div>
+      <div class="col-lg-12">
+        <h1 class="title-section">Artistas <a href="#!" class="btn-outline" data-toggle="modal" data-target="#newsinger">Nuevo</a></h1>
+        <br />
+        <table id="singers_table" class="display theme-datatable" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+            </tr>
+          </tfoot>
+        </table>
       </div>
     </div>
   </div>

@@ -8,14 +8,21 @@ $.fn.reset = function() {
 	$(this).each(function() { this.reset(); });
 };
 
-var tables = {
-	Singers: {}
-};
-
 var app = {
+
+	chosen : {
+		'.chosen-select'           : {width:"100%"},
+    '.chosen-select-deselect'  : {allow_single_deselect:true},
+    '.chosen-select-no-single' : {disable_search_threshold:10},
+    '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+    '.chosen-select-width'     : {width:"95%"}
+	},
 
 	initialization: function() {
 		// Init events
+		for (var selector in app.chosen) {
+      $(selector).chosen(app.chosen[selector]);
+    }
 	},
 
 	getlogin: function(formdata) {
@@ -77,6 +84,24 @@ var app = {
 				});
 				$('#singers_table').dataTable()._fnAjaxUpdate();
 			}
+		}).fail(function(jqXHR, textStatus) {
+			console.log('Request: ' + JSON.stringify(jqXHR) + ' : ' + textStatus);
+		});
+	},
+
+	newSongData: function() {
+
+		var formdata = new FormData($('#new_song')[0]);
+
+		$.ajax({
+			url: '/songs/new',
+			type: 'POST',
+			dataType: 'json',
+			data: formdata,
+	    contentType: false,
+	    processData: false,
+		}).done(function(data) {
+			console.log(data);
 		}).fail(function(jqXHR, textStatus) {
 			console.log('Request: ' + JSON.stringify(jqXHR) + ' : ' + textStatus);
 		});

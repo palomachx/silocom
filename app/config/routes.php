@@ -46,6 +46,8 @@ $route['login'] = 'BaseController/login';
 $route['dashboard'] = 'DashboardController';
 
 $route['songs'] = 'SongsController';
+$route['songs/new'] = 'SongsController/newsong';
+$route['songs/all'] = 'SongsController/getallsongs';
 
 $route['singers'] = 'SingersController';
 $route['singers/new'] = 'SingersController/newsinger';

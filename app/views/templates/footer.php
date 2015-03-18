@@ -5,6 +5,8 @@
 	<script type="text/javascript" src="public/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
 	<script type="text/javascript" src="public/bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="public/bower_components/noty/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+	<script type="text/javascript" src="public/bower_components/chosen_v1.4.1/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="public/bower_components/chosen_v1.4.1/chosen.proto.min.js"></script>
 	<!-- Functionality -->
 	<script type="text/javascript" src="public/js/app.js"></script>
 	<!-- Events -->
