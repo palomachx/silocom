@@ -20,6 +20,28 @@ class SongsModel extends CI_Model {
     }
   }
 
+	public function songnew($nombre, $anno, $duracion, $genero, $tipo, $disquera, $file, $letra){
+		if($letra == ''){
+			$letra = 'Sin letra';
+		}
+		$data = array(
+			'can_name' => $nombre,
+			'can_letra' => $letra,
+			'can_anno' => $anno,
+			'can_duracion' => $duracion,
+			'can_ruta' => $file,
+			'dis_id' => $disquera,
+			'tip_id' => $tipo,
+			'gen_id' => $genero
+		);
+		$this->db->insert('CI_Cancion', $data);
+		return $this->db->insert_id();
+	}
+
+	public function setArtistatoSong($artistas) {
+		return $this->db->insert_batch('CI_Detalle_Cancion', $artistas);
+	}
+
 	public function getgeneros() {
 		$query = $this->db->get('CI_Genero');
 		if($query->num_rows() > 0) {

@@ -6,9 +6,9 @@
   <div class="container-fluid left-sidebar s3-loader">
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="title-section">Artistas <a href="#!" class="btn-outline" data-toggle="modal" data-target="#newsinger">Agregar un Nuevo artista</a></h1>
+        <h1 class="title-section">Disqueras <a href="#!" class="btn-outline" data-toggle="modal" data-target="#newlabel">Agregar una Disquera</a></h1>
         <br />
-        <table id="singers_table" class="display theme-datatable" cellspacing="0" width="100%">
+        <table id="labels_table" class="display theme-datatable" cellspacing="0" width="100%">
           <thead>
             <tr>
               <th>#</th>
@@ -25,8 +25,8 @@
       </div>
     </div>
   </div>
-  <!-- Modal for new singer -->
-  <div class="modal fade" id="newsinger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <!-- Modal for new label -->
+  <div class="modal fade" id="newlabel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -34,18 +34,18 @@
           <h4 class="modal-title" id="myModalLabel">Registro de nuevo artista</h4>
         </div>
         <div class="modal-body">
-          <form id="new_singer">
+          <form id="new_label">
             <div class="form-group">
-              <label>Nombre del Artista</label>
-              <input type="text" name="singer" class="form-control" />
+              <label>Nombre de la Disquera</label>
+              <input type="text" name="label" class="form-control" />
               <br />
-              <div id="alert_singer" class="alert alert-danger hide" role="alert"></div>
+              <div id="alert_label" class="alert alert-danger hide" role="alert"></div>
             </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          <button type="button" id="singer_registre" class="btn btn-primary">Registrar</button>
+          <button type="button" id="label_registre" class="btn btn-primary">Registrar</button>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <?php $this->load->view('templates/header') ?>
 
-<body id="background">	
-	<div id="logtemplate">
+<body id="background">
+	<div id="logtemplate" class="s4-loader">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-lg-offset-4">
@@ -27,5 +27,5 @@
 			</div>
 		</div>
 	</div>
-	
+
 <?php $this->load->view('templates/footer') ?>

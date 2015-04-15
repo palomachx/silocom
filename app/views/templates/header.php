@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="public/bower_components/chosen_v1.4.1/chosen.css" />
 	<link rel="stylesheet" type="text/css" href="public/bower_components/DataTables/media/css/jquery.dataTables.min.css" />
 	<link rel="stylesheet" type="text/css" href="public/bower_components/noty/demo/animate.css" />
+	<link rel="stylesheet" type="text/css" href="public/bower_components/pace/themes/silocom/pace-silocom-theme.css" />
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="public/css/app.css" />
 </head>

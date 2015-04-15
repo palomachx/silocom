@@ -9,7 +9,11 @@ class BaseController extends CI_Controller {
 	}
 
 	public function index(){
-		$this->load->view('Authview');
+		if($this->session->userdata('status') != true){
+			$this->load->view('Authview');
+		} else {
+			redirect(base_url('dashboard'));
+		}
 	}
 
 	public function login() {

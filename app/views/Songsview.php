@@ -1,9 +1,9 @@
 <?php $this->load->view('templates/header') ?>
 
 <body class="graystrong">
-  <?php $this->load->view('templates/navbar') ?>
+  <!-- <?php $this->load->view('templates/navbar') ?> -->
   <div class="clearfix"></div>
-  <div class="container-fluid left-sidebar">
+  <div class="container-fluid left-sidebar s3-loader">
     <div class="row">
       <div class="row">
         <div class="col-lg-12">
@@ -50,70 +50,83 @@
         <div class="modal-body">
           <form id="new_song" enctype="multipart/form-data">
             <br />
-            <div class="form-group col-lg-12">
-              <label>Nombre de la Canción</label>
+            <div class="form-group col-lg-12 a-name">
+              <label>Nombre de la Canción <span class="required-span">*</span></label>
               <input type="text" name="song_name" class="form-control" />
+              <div class="label-error hide"></div>
               <br />
             </div>
-            <div class="form-group col-lg-4">
-              <label>Año</label>
+            <div class="form-group col-lg-4 a-anno">
+              <label>Año <span class="required-span">*</span></label>
               <select class="form-control" name="song_anno">
+                <option value="" selected>Seleccione</option>
                 <?php for($anio=(date("Y")); 1980<=$anio; $anio--): ?>
                   <option value="<?=intval($anio)?>"><?=intval($anio)?></option>
                 <?php endfor; ?>
               </select>
+              <div class="label-error hide"></div>
               <br />
             </div>
-            <div class="form-group col-lg-4">
-              <label>Duración</label>
+            <div class="form-group col-lg-4 a-duration">
+              <label>Duración <span class="required-span">*</span></label>
               <input type="text" name="song_duration" class="form-control" placeholder="00:00" />
+              <div class="label-error hide"></div>
               <br />
             </div>
-            <div class="form-group col-lg-4">
-              <label>Género</label>
+            <div class="form-group col-lg-4 a-genero">
+              <label>Género <span class="required-span">*</span></label>
               <select class="chosen-select" name="song_genero">
+                <option value="" selected>Seleccione</option>
                 <?php foreach($generos as $row): ?>
                   <option value="<?=$row['gen_id']?>"><?=$row['gen_name']?></option>
                 <?php endforeach; ?>
               </select>
+              <div class="label-error hide"></div>
               <br />
             </div>
             <div class="clearfix"></div>
-            <div class="form-group col-lg-4">
-              <label>Tipo</label>
+            <div class="form-group col-lg-4 a-tipo">
+              <label>Tipo <span class="required-span">*</span></label>
               <select class="chosen-select" name="song_tipo">
+                <option value="" selected>Seleccione</option>
                 <?php foreach($tipos as $row): ?>
                   <option value="<?=$row['tip_id']?>"><?=$row['tip_name']?></option>
                 <?php endforeach; ?>
               </select>
+              <div class="label-error hide"></div>
               <br />
             </div>
-            <div class="form-group col-lg-8">
-              <label>Artistas</label>
+            <div class="form-group col-lg-8 a-artista">
+              <label>Artistas <span class="required-span">*</span></label>
               <select class="chosen-select" multiple name="song_artistas[]">
                 <?php foreach($artistas as $row): ?>
                   <option value="<?=$row['art_id']?>"><?=$row['art_name']?></option>
                 <?php endforeach; ?>
               </select>
+              <div class="label-error hide"></div>
               <br />
             </div>
             <div class="clearfix"></div>
-            <div class="form-group col-lg-6">
-              <label>Adjunta el archivo</label>
+            <div class="form-group col-lg-6 a-file">
+              <label>Adjunta el archivo <span class="required-span">*</span></label>
               <input class="form-control" type="file" name="file" />
+              <div class="label-error hide"></div>
             </div>
-            <div class="form-group col-lg-6">
-              <label>Disquera</label>
+            <div class="form-group col-lg-6 a-disquera">
+              <label>Disquera <span class="required-span">*</span></label>
               <select class="chosen-select" name="song_disquera">
+                <option value="" selected>Seleccione</option>
                 <?php foreach($disqueras as $row): ?>
                   <option value="<?=$row['dis_id']?>"><?=$row['dis_name']?></option>
                 <?php endforeach; ?>
               </select>
+              <div class="label-error hide"></div>
             </div>
             <div class="clearfix"></div>
             <div class="form-group col-lg-12">
               <label>Letra</label>
               <textarea rows="10" class="form-control" name="song_letra" placeholder="Escribe la letra de la canción..."></textarea>
+              <div class="label-error hide"></div>
             </div>
             <div class="clearfix"></div>
           </form>
