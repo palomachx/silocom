@@ -21,7 +21,7 @@ $(function(){
 	 * y lo carga con nuevo contenido.
 	 */
 
-	$('a').on('click', function(e) {
+	$('ul.nav a').on('click', function(e) {
 		e.preventDefault();
 		var uri = $(this).data('href');
 		$('.item').removeClass('active');
@@ -55,6 +55,8 @@ $(function(){
 		/* 'processing': true, */
 		ajax: 'songs/all',
 		columns: [
+			{'data': null},
+			{'data': null},
 			{'data': 'can_id'},
 			{'data': 'can_name'},
 			{'data': 'can_anno'},
@@ -66,14 +68,40 @@ $(function(){
 		],
 		columnDefs: [
 			{render: function(data, type, row){
-				return data[0] + '<a class="hide" href=""><span class="icon-play"></span></a>';
-			}, targets: 0}
+				return '<button class="zone hide" data-name="' + row.can_name + '" data-singer="' + row.authors + '" data-song="' + row.can_ruta + '"><i class="glyphicon glyphicon-play"></i></button>';
+			}, targets: 0},
+			{render: function(data, type, row) {
+				return '<button id="add_pl" class="add_btn"><i class="icon-plus"></i></button>'
+			}, targets: 1}
 		],
 	});
 
 	$('#song_registre').on('click', function(e){
 		e.preventDefault();
 		app.newSongData();
+	});
+
+	$('#songs_table tbody').on('mouseenter', 'tr', function() {
+		var element = $('td', this).eq(0).children();
+		// console.log(element);
+		$(element[0]).removeClass('hide');
+	}).on('mouseleave', 'tr', function() {
+		var element = $('td', this).eq(0).children();
+		// console.log(element);
+		$(element[0]).addClass('hide');
+	});
+
+	$('#songs_table tbody').on('click', 'button.zone', function(e) {
+		var element = $(this);
+		window.parent.globals.music.pause();
+		// console.log(childr);
+		var uri = element[0].getAttribute('data-song');
+		var name = element[0].getAttribute('data-name');
+		var singer = element[0].getAttribute('data-singer');
+		// console.log(window.parent.globals.music);
+		window.parent.globals.music.labels(singer, name);
+		window.parent.globals.music.load(uri);
+		// console.log($(this));
 	});
 
 	/* Seccion para Usuarios */

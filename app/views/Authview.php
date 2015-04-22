@@ -27,5 +27,7 @@
 			</div>
 		</div>
 	</div>
-
+	<?php $this->load->view('templates/music.php'); ?>
+	
+<?php $this->load->view('templates/scripts.php'); ?>
 <?php $this->load->view('templates/footer') ?>

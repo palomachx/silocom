@@ -23,7 +23,7 @@ var app = {
 		for (var selector in app.chosen) {
       $(selector).chosen(app.chosen[selector]);
     }
-	},
+  },
 
 	getlogin: function(formdata) {
 		$.ajax({
@@ -43,7 +43,7 @@ var app = {
 					swal('Ups!', 'Nombre de Usuario y/o Contraseña Incorrectos', 'error');
 				}
 			}else{
-				location.href='/dashboard';
+				location.href='/main';
 			}
 		}).fail(function(jqXHR, textStatus){
 			console.log('Request: ' + JSON.stringify(jqXHR) + ' : ' + textStatus);

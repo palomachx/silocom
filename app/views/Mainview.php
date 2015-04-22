@@ -6,5 +6,10 @@
 	<div class="container-fluid left-sidebar s3-loader">
 		<iframe id="dynamic_frame" src="/dashboard" class="frame-fullscreen"></iframe>
 	</div>
+	<!-- Reproductor de Música Silocom -->
+	<?php $this->load->view('templates/music.php'); ?>
 
-<?php $this->load->view('templates/footer') ?>
+<?php $this->load->view('templates/global.php'); ?>
+<?php $this->load->view('templates/scripts.php'); ?>
+<?php $this->load->view('templates/musicjs.php'); ?>
+<?php $this->load->view('templates/footer'); ?>

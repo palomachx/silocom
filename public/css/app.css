@@ -229,6 +229,8 @@ a, button {
 
 .left-sidebar {
 	margin-left: 200px !important;
+	margin-top: -40px !important;
+	margin-bottom: 70px !important;
 }
 
 .navbar-twitch.open {
@@ -411,12 +413,13 @@ a, button {
 .theme-datatable tbody tr > td,
 .dataTables_processing {
 	background: none !important;
+	padding: 13px 0;
 }
 
 .theme-datatable tbody tr > td {
 	border-top: 1px solid #313131 !important;
 	color: #FFFFFF;
-	padding: 8px 20px !important;
+	padding: 13px 20px !important;
 	font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
@@ -538,12 +541,7 @@ a, button {
 	border-bottom-left-radius: 0px !important;
 }
 
-/* PACE */
-.pace-running .s3-loader{
-    zoom:1;
-    filter:alpha(opacity=10);
-    opacity:0;
-}
+/* PACE 
 
 .pace-running .s4-loader{
     zoom:1;
@@ -559,4 +557,76 @@ a, button {
     -moz-transition:opacity 1s linear;
     -o-transition:opacity 1s linear;
     transition:opacity 1s linear;
+}
+*/
+
+tbody tr > td {
+	position: relative;
+}
+
+/* * * * * * * * * The Player for Silocom */
+
+#player-silocom {
+	height: 70px;
+  background-color: #222222;
+  /* margin: 0 -15px; */
+  position: fixed;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #0D0D0D;
+  z-index: 9990;
+}
+
+#list-controls {
+	padding: 20px;
+}
+
+#list-controls li > a{
+	font-size: 25px;
+	text-decoration: none;
+}
+
+.singer-label {
+	padding-top: 10px;
+	color: #FAFAFA;
+	text-align: center;
+	font-weight: bold;
+}
+
+button.zone {
+	border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline;
+  border: 1px solid #CC215A;
+  position: absolute;
+  z-index: 9999 !important;
+  top: 8px;
+  left: 12px;
+  -webkit-transition: none !important;
+  transition: none !important;
+  cursor: default;
+  background: #0D0D0D;
+  /* border: 1px solid; */
+}
+
+button.zone i {
+  font-size: 15px;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  color: #CC215A;
+}
+
+#singer-label p,
+#song-label p {
+	margin: 0 !important;
+	text-shadow: 0px 1px 2px #000000;
+}
+
+.add_btn {
+	background: none !important;
+	border: 0;
+	margin-top: 2px;
 }

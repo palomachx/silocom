@@ -12,6 +12,8 @@
           <table id="songs_table" class="display theme-datatable" cellspacing="0" width="100%">
             <thead>
               <tr>
+                <th></th>
+                <th></th>
                 <th>#</th>
                 <th>Nombre</th>
                 <th>Año</th>
@@ -24,6 +26,8 @@
             </thead>
             <tfoot>
               <tr>
+                <th></th>
+                <th></th>
                 <th>#</th>
                 <th>Nombre</th>
                 <th>Año</th>
@@ -140,4 +144,5 @@
   </div>
   <!-- End Modal Structure -->
 
-<?php $this->load->view('templates/footer') ?>
+<?php $this->load->view('templates/scripts.php'); ?>
+<?php $this->load->view('templates/footer'); ?>

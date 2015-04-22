@@ -12,7 +12,7 @@ class BaseController extends CI_Controller {
 		if($this->session->userdata('status') != true){
 			$this->load->view('Authview');
 		} else {
-			redirect(base_url('dashboard'));
+			redirect(base_url('main'));
 		}
 	}
 

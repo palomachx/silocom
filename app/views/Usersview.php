@@ -99,4 +99,5 @@
   </div>
   <!-- End Modal Structure -->
 
+<?php $this->load->view('templates/scripts.php'); ?>
 <?php $this->load->view('templates/footer') ?>
