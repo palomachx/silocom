@@ -15,13 +15,13 @@ $(function(){
 		app.getlogin($(this).serialize());
 	});
 
-	/* 
-	 * Sección para cambiar el status activo de las Navbar 
+	/*
+	 * Sección para cambiar el status activo de las Navbar
 	 * respecto a la opción que se seleccione, cambie además el iframe
 	 * y lo carga con nuevo contenido.
 	 */
 
-	$('ul.nav a').on('click', function(e) {
+	$('ul.nav li.item a').on('click', function(e) {
 		e.preventDefault();
 		var uri = $(this).data('href');
 		if(uri == '/playlist'){
@@ -32,7 +32,7 @@ $(function(){
 			} else {
 				$('#playlist').addClass('slide');
 				$('.item').removeClass('active');
-				$(this).parent().addClass('active');	
+				$(this).parent().addClass('active');
 			}
 		}else{
 			$('.item').removeClass('active');
@@ -41,11 +41,11 @@ $(function(){
 			if(cl_name == 'item') {
 				$('#dynamic_frame').attr("src", uri);
 				$(this).parent().addClass('active');
-				$('.before').removeClass('before');	
+				$('.before').removeClass('before');
 				$(this).parent().addClass('before');
 			}
 		}
-		
+
 	});
 
 	/* Seccion para Cantantes */

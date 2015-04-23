@@ -1,7 +1,7 @@
 
-/* Funciones para media player */ 
+/* Funciones para media player */
 globals.music = {
-	
+
 	wavesurfer: {},
 
 	status_play: {},
@@ -25,11 +25,11 @@ globals.music = {
 		if(globals.music.status_play){
 			globals.music.status_play = false;
 			var parentp = $('#play').children();
-			$(parentp[0]).removeClass('icon-pause').addClass('icon-play');
+			$(parentp[0]).removeClass('glyphicon glyphicon-pause').addClass('glyphicon glyphicon-play');
 		}else{
 			globals.music.status_play = true;
 			var parentp = $('#play').children();
-			$(parentp[0]).removeClass('icon-play').addClass('icon-pause');
+			$(parentp[0]).removeClass('glyphicon glyphicon-play').addClass('glyphicon glyphicon-pause');
 		}
 	},
 
@@ -42,24 +42,24 @@ globals.music = {
 
 };
 
-/* 
+/*
  * Eventos del reproductor de música
  */
 $(function(){
 
 	globals.music.init();
-	
+
 	globals.music.wavesurfer.on('ready', function() {
 		globals.music.status_play = true;
 		globals.music.wavesurfer.play();
 		$('#wave').attr('style', 'position: absolute; width: 100%;');
     var parentp = $('#play').children();
-		$(parentp[0]).removeClass('icon-play').addClass('icon-pause');
+		$(parentp[0]).removeClass('icon-play').addClass('glyphicon glyphicon-pause');
 	});
 
 	globals.music.wavesurfer.on('finish', function() {
 		var parentp = $('#play').children();
-		$(parentp[0]).removeClass('icon-pause').addClass('icon-play');
+		$(parentp[0]).removeClass('glyphicon glyphicon-pause').addClass('icon-play');
 	});
 
 	$('#play').on('click', function(e) {
@@ -69,7 +69,7 @@ $(function(){
 
 	$('#forward').on('click', function(e) {
 		e.preventDefault();
-		globals.music.load('public/uploads/18 - ZerypheshTwilight.mp3');
+		// globals.music.load('public/uploads/18 - ZerypheshTwilight.mp3');
 	});
 
 });
