@@ -24,13 +24,28 @@ $(function(){
 	$('ul.nav a').on('click', function(e) {
 		e.preventDefault();
 		var uri = $(this).data('href');
-		$('.item').removeClass('active');
-		var pp = $(this).parent();
-		var cl_name = pp[0].className;
-		if(cl_name == 'item') {
-			$('#dynamic_frame').attr("src", uri);
-			$(this).parent().addClass('active');	
+		if(uri == '/playlist'){
+			if($(this).parent().hasClass('active')){
+				$('#playlist').removeClass('slide').css('left','0px');
+				$(this).parent().removeClass('active');
+				$('.before').addClass('active');
+			} else {
+				$('#playlist').addClass('slide');
+				$('.item').removeClass('active');
+				$(this).parent().addClass('active');	
+			}
+		}else{
+			$('.item').removeClass('active');
+			var pp = $(this).parent();
+			var cl_name = pp[0].className;
+			if(cl_name == 'item') {
+				$('#dynamic_frame').attr("src", uri);
+				$(this).parent().addClass('active');
+				$('.before').removeClass('before');	
+				$(this).parent().addClass('before');
+			}
 		}
+		
 	});
 
 	/* Seccion para Cantantes */

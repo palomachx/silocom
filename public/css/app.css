@@ -26,6 +26,10 @@ body.graystrong {
 	background: #0D0D0D;
 }
 
+body.cover {
+	background: url(../img/cover-background.jpg);
+}
+
 html {
 	width: 100%;
 	height: 100%;
@@ -153,6 +157,11 @@ a, button {
   padding: 10px 25px;
 }
 
+.li-logo {
+	padding-top: 35px;
+  padding-bottom: 15px;
+}
+
 .title-section {
 	font-family: 'Open Sans', sans-serif !important;
   font-weight: 300 !important;
@@ -213,6 +222,7 @@ a, button {
 	position: fixed !important;
 	top: 0px;
 	left: 0px;
+	background: #1c1c1f !important;
 	width: 200px;
 	height: 100%;
 	border-radius: 0px;
@@ -568,7 +578,7 @@ tbody tr > td {
 
 #player-silocom {
 	height: 70px;
-  background-color: #222222;
+  background: #1c1c1f !important;
   /* margin: 0 -15px; */
   position: fixed;
   display: block;
@@ -629,4 +639,80 @@ button.zone i {
 	background: none !important;
 	border: 0;
 	margin-top: 2px;
+}
+
+#playlist {
+	background: #222326 !important;
+}
+
+.slide {
+  left: -100px;
+	width: 300px !important;
+  z-index: 1029;
+  -webkit-animation: slide 0.2s forwards;
+  /*-webkit-animation-delay: 2s;*/
+  animation: slide 0.2s forwards;
+  /*animation-delay: 2s;*/
+  border-right: 1px solid #222326;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
+}
+
+@-webkit-keyframes slide {
+    100% { left: 200px; }
+}
+
+@keyframes slide {
+    100% { left: 200px; }
+}
+
+/* Range type */
+
+.slider-range {
+  position: absolute;
+  width: 90px !important;
+  top: 32px;
+  right: 35px;
+}
+
+.letras {
+  position: absolute;
+  top: 24px;
+  left: 45px;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  border-radius: 5px;
+  /* box-shadow: inset 0 0 5px #333; */
+  background-color: #777777;
+  height: 7px;
+  vertical-align: middle;
+}
+
+input[type='range']::-moz-range-track {
+	-moz-appearance: none;
+	border-radius: 5px;
+	box-shadow: inset 0 0 5px #333;
+	background-color: #999;
+	height: 10px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	border-radius: 10px;
+	background-color: #FAFAFA;
+	/*box-shadow:inset 0 0 10px rgba(000,000,000,0.5);*/
+	/*border: 1px solid #999;*/
+	height: 15px;
+	width: 15px;
+}
+
+input[type='range']::-moz-range-thumb {
+	-moz-appearance: none;
+	border-radius: 20px;
+	background-color: #FFF;
+	box-shadow:inset 0 0 10px rgba(000,000,000,0.5);
+	border: 1px solid #999;
+	height: 20px;
+	width: 20px;
 }

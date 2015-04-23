@@ -1,22 +1,18 @@
-  <?php
-
-    function evalURI($uri) {
-      if(strstr($_SERVER['REQUEST_URI'], $uri)){ echo 'active'; }
-    }
-
-  ?>
 
   <div class="navbar navbar-inverse navbar-twitch" role="navigation">
     <div class="container">
       <div class="">
         <ul class="nav navbar-nav">
+          <li class="li-logo">
+            <a href="#"><img src="public/img/logotype.png" width="205" /></a>
+          </li>
           <li class="li-title-nav">
             <span>Música</span>
           </li>
-          <li class="item active">
+          <li class="item active before">
             <a href="#" data-href="/dashboard">
               <span class="small-nav">
-                <span class="icon-stack icon-sidebar"></span> Dashboard
+                <span class="icon-stack icon-sidebar" width="205"></span> Dashboard
               </span>
             </a>
           </li>
@@ -30,7 +26,7 @@
           <li class="item">
             <a href="#" data-href="/playlist">
               <span class="small-nav">
-                <span class="icon-music icon-sidebar"></span> Playlist
+                <span class="icon-music icon-sidebar"></span> Playlists
               </span>
             </a>          
           </li>
