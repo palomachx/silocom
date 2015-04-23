@@ -39,11 +39,34 @@
 */
 
 $route['default_controller'] = "BaseController";
-$route['404_override'] = 'errors/page_missing';
+$route['404_override'] = '';
+$route['login'] = 'BaseController/login';
 
-#My Functionals Routes 
-$route['dashboard'] = "DashboardController";
+# My Functionals Routes
+$route['main'] = 'MainController';
+$route['dashboard'] = 'DashboardController';
 
+$route['songs'] = 'SongsController';
+$route['songs/new'] = 'SongsController/newsong';
+$route['songs/all'] = 'SongsController/getallsongs';
+
+$route['singers'] = 'SingersController';
+$route['singers/new'] = 'SingersController/newsinger';
+$route['singers/all'] = 'SingersController/getallsingers';
+
+$route['users'] = 'UsersController';
+$route['users/new'] = 'UsersController/newuser';
+$route['users/all'] = 'UsersController/getallusers';
+
+$route['kinds'] = 'GenrestypesController';
+$route['genres/new'] = 'GenrestypesController/newgenre';
+$route['genres/all'] = 'GenrestypesController/getallgenres';
+$route['types/new'] = 'GenrestypesController/newtype';
+$route['types/all'] = 'GenrestypesController/getalltypes';
+
+$route['labels'] = 'LabelsController';
+$route['labels/all'] = 'LabelsController/get';
+$route['labels/new'] = 'LabelsController/newlabel';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

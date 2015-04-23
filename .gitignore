@@ -9,3 +9,7 @@ app/logs/*
 !app/logs/.htaccess
 app/config/database.php
 app/config/config.php
+public/uploads/*
+public/third_party/*
+web.config
+database/*
