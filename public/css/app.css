@@ -702,10 +702,19 @@ a.letras:hover {
 	color: #777777 !important;
 }
 
+.label-top {
+	border-bottom: 1px solid #1C1C1F;
+  box-shadow: 0px 1px #292A2D;
+  padding-bottom: 10px;
+}
+
+.label-top span {
+	color: #939393;
+	text-transform: uppercase;
+}
+
 .no-data {
 	margin-top: 10px;
-	border-top: 1px solid #1C1C1F;
-	box-shadow: 0px -1px #292A2D;
 	padding-top: 50px;
 	line-height: 24px;
 	text-align: center;
@@ -719,6 +728,37 @@ a.letras:hover {
 	position: absolute;
 	width: 100%;
 	bottom: 95px;
+}
+
+.nav-playlist {
+}
+
+.nav-playlist li {
+	padding-bottom: 5px;
+}
+
+.nav-playlist li > a.atem {
+	background: #2A2B2F;
+	color: #939393 !important;
+	padding: 20px 20px;
+	font-size: 12px;
+	position: relative;
+	padding-left: 70px;
+}
+
+.nav-playlist li > a.atem:hover {
+  background: #1C1D1F !important;
+}
+
+.nav-playlist >li > a {
+	border-radius: 2px !important:
+}
+
+.icons-playlist {
+	position: absolute;
+	left: 25px;
+	top: 19px;
+	font-size: 21px;
 }
 
 input[type='range'] {
