@@ -6,6 +6,8 @@ globals.music = {
 
 	status_play: {},
 
+	data_row: {},
+
 	init: function(){
 		globals.music.wavesurfer = Object.create(WaveSurfer);
 		globals.music.wavesurfer.init({
@@ -38,6 +40,29 @@ globals.music = {
 		$('#song-label p').remove().empty();
 		$('#singer-label').html('<p>' + singer + '</p>');
 		$('#song-label').html('<p>' + song + '</p>');
+	},
+
+	mousex: function(e) {
+		return e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
+		// globals.music.mousey = e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+		// console.log(globals.music.mousex + ' , ' + globals.music.mousey);
+	},
+
+	mousey: function(e) {
+		return e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+	},
+
+	activatedropdown: function(x,y, row) {
+		$('.dropdown').addClass('open');
+		$('#dropdown-playlist').css('left',x).css('top',y);
+		$('#edit-song').attr('data-id-song', row.can_id);
+		$('#remove-song').attr('data-id-song', row.can_id);
+		globals.music.data_row = row;
+		// console.log(globals.music.data_row);
+	},
+
+	desactivatedropdown: function() {
+		$('.dropdown').removeClass('open');
 	}
 
 };
@@ -47,7 +72,13 @@ globals.music = {
  */
 $(function(){
 
+	$(window, document, 'iframe').on('click', function(e) {
+		$('.dropdown').removeClass('open');
+	});
+
 	globals.music.init();
+
+	$('iframe').niceScroll();
 
 	globals.music.wavesurfer.on('ready', function() {
 		globals.music.status_play = true;
@@ -70,6 +101,19 @@ $(function(){
 	$('#forward').on('click', function(e) {
 		e.preventDefault();
 		// globals.music.load('public/uploads/18 - ZerypheshTwilight.mp3');
+	});
+
+	/* Scroll Event */
+	console.log($('#playlist').height());
+	var height = $('#playlist').height();
+	$('#l_playlist').css('height', height-206);
+	$('#l_playlist').niceScroll();
+
+	$(window).resize(function() {
+		console.log($('#playlist').height());
+		var height = $('#playlist').height();
+		$('#l_playlist').css('height', height-206);
+		$('#l_playlist').niceScroll();
 	});
 
 });

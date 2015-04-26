@@ -8,6 +8,11 @@ $(function(){
 
 	app.initialization();
 
+	$(document).on('click', function(e) {
+		e.preventDefault();
+		window.parent.globals.music.desactivatedropdown();
+	});
+
 	/* Sección para Inicio de Sesión */
 
 	$('#form_login').submit(function(e) {
@@ -45,7 +50,6 @@ $(function(){
 				$(this).parent().addClass('before');
 			}
 		}
-
 	});
 
 	/* Seccion para Cantantes */
@@ -66,11 +70,10 @@ $(function(){
 
 	/* Secccion para Canciones */
 
-	var canciones = $('#songs_table').dataTable({
+	app.canciones = $('#songs_table').dataTable({
 		/* 'processing': true, */
 		ajax: 'songs/all',
 		columns: [
-			{'data': null},
 			{'data': null},
 			{'data': 'can_id'},
 			{'data': 'can_name'},
@@ -84,10 +87,7 @@ $(function(){
 		columnDefs: [
 			{render: function(data, type, row){
 				return '<button class="zone hide" data-name="' + row.can_name + '" data-singer="' + row.authors + '" data-song="' + row.can_ruta + '"><i class="glyphicon glyphicon-play"></i></button>';
-			}, targets: 0},
-			{render: function(data, type, row) {
-				return '<button id="add_pl" class="add_btn"><i class="icon-plus"></i></button>'
-			}, targets: 1}
+			}, targets: 0}
 		],
 	});
 
@@ -117,6 +117,17 @@ $(function(){
 		window.parent.globals.music.labels(singer, name);
 		window.parent.globals.music.load(uri);
 		// console.log($(this));
+	});
+
+	$('#songs_table tbody').on('mousemove', 'tr', function(e) {
+		app.mousex = window.parent.globals.music.mousex(e);
+		app.mousey = window.parent.globals.music.mousey(e);
+	});
+
+	$('#songs_table tbody').on('contextmenu', 'tr', function(e) {
+		window.parent.globals.music.activatedropdown(app.mousex, app.mousey, app.canciones.fnGetData(this));
+		// console.log(app.canciones.fnGetData(this));
+		return false;
 	});
 
 	/* Seccion para Usuarios */
