@@ -6,6 +6,7 @@
 
 @import url(../bower_components/open-sans-fontface/open-sans.css);
 @import url(icomoon/style.css);
+@import url(notify.css);
 
 * {
 	outline: 0 none;
@@ -62,7 +63,7 @@ a, button {
 	overflow:hidden;
 	overflow-x:hidden;
 	overflow-y:hidden;
-	height:90%;
+	height:100%;
 	width:100%;
 	position:absolute;
 	top:0px;
@@ -782,7 +783,7 @@ a.letras:hover {
 }
 
 .dropdown-theme {
-	z-index: 9999 !important;
+	z-index: 1020 !important;
 }
 
 .dropdown-theme li.divider {

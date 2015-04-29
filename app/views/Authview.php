@@ -1,6 +1,6 @@
 <?php $this->load->view('templates/header') ?>
 
-<body id="background">
+<body id="background" class="animated fadeInDown">
 	<div id="logtemplate" class="s4-loader">
 		<div class="container">
 			<div class="row">
@@ -27,6 +27,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 <?php $this->load->view('templates/scripts.php'); ?>
 <?php $this->load->view('templates/footer') ?>
