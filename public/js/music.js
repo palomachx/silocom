@@ -8,6 +8,10 @@ globals.music = {
 
 	data_row: {},
 
+	current_table: {},
+
+	row_pos: {},
+
 	init: function(){
 		globals.music.wavesurfer = Object.create(WaveSurfer);
 		globals.music.wavesurfer.init({
@@ -52,9 +56,9 @@ globals.music = {
 		return e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
 	},
 
-	activatedropdown: function(x,y, row) {
+	activatedropdown: function(x, y, row) {
 		$('.dropdown').addClass('open');
-		$('#dropdown-playlist').css('left',x).css('top',y);
+		$('#dropdown-playlist').css('left', x).css('top', y);
 		$('#edit-song').attr('data-id-song', row.can_id);
 		$('#remove-song').attr('data-id-song', row.can_id);
 		globals.music.data_row = row;
@@ -63,6 +67,19 @@ globals.music = {
 
 	desactivatedropdown: function() {
 		$('.dropdown').removeClass('open');
+	},
+
+	notification: function(label, message, type, effect) {
+		var html = "<div class='notify alert animated " + effect + " " + type + "' role='alert'><div class='main-notify'>"
+								+ "<h6 class='label-notify'>" + label + "</h6><p class='notify-info'>" + message + "</p></div>"
+								+ "<a class='close-notify close' data-dismiss='alert' aria-label='Close' href='#'><span class='icon-cross'></span></a></div>";
+		$('body').append(html);
+		setTimeout(function() {
+			$('.alert').removeClass('bounceIn').addClass('bounceOut');
+			$('.alert').fadeOut(1000, function() {
+				$(this).remove();
+			});
+		}, 5000);
 	}
 
 };
@@ -72,9 +89,9 @@ globals.music = {
  */
 $(function(){
 
-	$(window, document, 'iframe').on('click', function(e) {
+	/* $(window, document, 'iframe').on('click', function(e) {
 		$('.dropdown').removeClass('open');
-	});
+	});*/ 
 
 	globals.music.init();
 
@@ -102,6 +119,31 @@ $(function(){
 		e.preventDefault();
 		// globals.music.load('public/uploads/18 - ZerypheshTwilight.mp3');
 	});
+
+	/* Eventos para Dropdown */
+
+	$('a#edit-song').on('click', function(e){
+		e.preventDefault();
+	});
+
+	$('a#remove-song').on('click', function(e) {
+		e.preventDefault();
+		$.ajax({
+			url: 'songs/delete/'+globals.music.data_row.can_id,
+			dataType: 'json'
+		}).done(function(response) {
+			globals.music.notification('Enhorabuena', 'Canción eliminada correctamente', 'bounceIn', 'success');
+			globals.music.current_table.fnDeleteRow(globals.music.row_pos);
+		}).fail(function(jqXHR, textStatus){
+			console.log('Request: ' + JSON.stringify(jqXHR) + ' : ' + textStatus);
+		});
+		console.log({
+			'Position': globals.music.row_pos,
+			'DataRow': globals.music.data_row
+		});
+	});
+
+	/************************/
 
 	/* Scroll Event */
 	console.log($('#playlist').height());

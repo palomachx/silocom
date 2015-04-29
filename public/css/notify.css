@@ -1,0 +1,121 @@
+/*
+ * Author: Javier Díaz;
+ * Notification Style Sctructure
+ * http://coderdiaz.me
+ */
+
+.notify {
+	position: absolute;
+	z-index: 9999;
+	width: 320px;
+	top: 20px;
+	right: 20px;
+}
+
+.notify.alert {
+	padding: 0 !important;
+	border-radius: 0 !important;
+}
+
+.notify > .main-notify {
+	padding: 10px 20px;
+	position: relative;
+}
+
+.notify > .close-notify {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.notify > .main-notify > .label-notify {
+	/*color: #CB2059;*/
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/*
+ * Theme Default Notify
+ */
+
+.notify.default {
+  background: #1B1B1E;
+}
+
+.notify.default > .close-notify {
+  color: #939393 !important;
+  text-decoration: none;
+}
+
+.notify.default > .main-notify > .label-notify {
+	color: #CB2059;
+}
+
+.notify.default > .main-notify > .notify-info {
+	color: #969696;
+}
+
+
+/*
+ * Theme Success Notify
+ */
+
+.notify.success {
+	background: #689D2F;
+}
+
+.notify.success > .close-notify {
+  color: #3A5E14 !important;
+  text-decoration: none;
+}
+
+.notify.success > .main-notify > .label-notify {
+	color: #3A5E14;
+}
+
+.notify.success > .main-notify > .notify-info {
+	color: #E4E4E4;
+}
+
+/*
+ * Theme Error Notify
+ */
+
+.notify.error {
+	background: #A12626;
+}
+
+.notify.error > .close-notify {
+  color: #551111 !important;
+  text-decoration: none;
+}
+
+.notify.error > .main-notify > .label-notify {
+	color: #551111;
+}
+
+.notify.error > .main-notify > .notify-info {
+	color: #E4E4E4;
+}
+
+/*
+ * Theme Warning Notify
+ */
+
+.notify.warning {
+	background: #DDBF29;
+}
+
+.notify.warning > .close-notify {
+  color: #98831D !important;
+  text-decoration: none;
+}
+
+.notify.warning > .main-notify > .label-notify {
+	color: #98831D;
+}
+
+.notify.warning > .main-notify > .notify-info {
+	color: #352E0A;
+}

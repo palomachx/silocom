@@ -14,11 +14,7 @@ var app = {
 
 	mousey: {},
 
-	/* Result Set Table DataTables */
-
 	canciones: {},
-
-	/*+++++++++++++++++++++++++++++*/
 
 	chosen : {
 		'.chosen-select'           : {width:"100%"},

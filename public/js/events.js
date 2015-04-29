@@ -8,11 +8,6 @@ $(function(){
 
 	app.initialization();
 
-	$(document).on('click', function(e) {
-		e.preventDefault();
-		window.parent.globals.music.desactivatedropdown();
-	});
-
 	/* Sección para Inicio de Sesión */
 
 	$('#form_login').submit(function(e) {
@@ -125,8 +120,13 @@ $(function(){
 	});
 
 	$('#songs_table tbody').on('contextmenu', 'tr', function(e) {
+		var target_row = $(this).get(0);
+		var row_pos = app.canciones.fnGetPosition(target_row);
 		window.parent.globals.music.activatedropdown(app.mousex, app.mousey, app.canciones.fnGetData(this));
-		// console.log(app.canciones.fnGetData(this));
+		// console.log(row_pos);
+		window.parent.globals.music.current_table = app.canciones;
+		window.parent.globals.music.row_pos = row_pos;
+		// app.canciones.fnDeleteRow(row_pos);
 		return false;
 	});
 

@@ -78,4 +78,10 @@ class SongsModel extends CI_Model {
 		}
 	}
 
+	public function removeSong($id) {
+		$tables = array('CI_Detalle_Cancion', 'CI_Cancion');
+		$this->db->where('can_id', $id);
+		return $this->db->delete($tables);
+	}
+
 }

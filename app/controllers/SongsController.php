@@ -177,7 +177,21 @@ class SongsController extends CI_Controller {
         }
       }
     }
+  }
 
+  public function delete_song($id_song) {
+    $result = $this->SongsModel->removeSong($id_song);
+    if($result){
+      echo json_encode(array(
+        'success' => true,
+        'message' => 'Canción eliminada correctamente.'
+      ));
+    }else{
+      echo json_encode(array(
+        'success' => false,
+        'message' => 'Ocurrio un problema al realizar la petición.'
+      ));
+    }
   }
 
 }

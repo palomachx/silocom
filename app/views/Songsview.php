@@ -1,6 +1,6 @@
 <?php $this->load->view('templates/header') ?>
 
-<body class="graystrong">
+<body class="graystrong animated fadeIn">
   <!-- <?php $this->load->view('templates/navbar') ?> -->
   <div class="clearfix"></div>
   <div class="container-fluid left-sidebar s3-loader">
@@ -109,9 +109,9 @@
               <br />
             </div>
             <div class="clearfix"></div>
-            <div class="form-group col-lg-6 a-file">
+            <div class="form-group col-lg-6 a-file" id="clicaqui">
               <label>Adjunta el archivo <span class="required-span">*</span></label>
-              <input class="form-control" type="file" name="file" />
+              <input id="#files" type="file" name="file">
               <div class="label-error hide"></div>
             </div>
             <div class="form-group col-lg-6 a-disquera">
@@ -143,4 +143,5 @@
   <!-- End Modal Structure -->
 
 <?php $this->load->view('templates/scripts.php'); ?>
+<?php $this->load->view('templates/silocom.php'); ?>
 <?php $this->load->view('templates/footer'); ?>
