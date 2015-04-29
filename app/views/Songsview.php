@@ -3,7 +3,7 @@
 <body class="graystrong animated fadeIn">
   <!-- <?php $this->load->view('templates/navbar') ?> -->
   <div class="clearfix"></div>
-  <div class="container-fluid left-sidebar s3-loader">
+  <div class="container-fluid left-sidebar s3-loader container-datas">
     <div class="row">
       <div class="row">
         <div class="col-lg-12 dropdown">
