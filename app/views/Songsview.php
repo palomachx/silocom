@@ -6,13 +6,12 @@
   <div class="container-fluid left-sidebar s3-loader">
     <div class="row">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12 dropdown">
           <h1 class="title-section">Canciones <a href="#!" class="btn-outline" data-toggle="modal" data-target="#newsong">Agregar una canción</a></h1>
           <br />
           <table id="songs_table" class="display theme-datatable" cellspacing="0" width="100%">
             <thead>
               <tr>
-                <th></th>
                 <th></th>
                 <th>#</th>
                 <th>Nombre</th>
@@ -26,7 +25,6 @@
             </thead>
             <tfoot>
               <tr>
-                <th></th>
                 <th></th>
                 <th>#</th>
                 <th>Nombre</th>

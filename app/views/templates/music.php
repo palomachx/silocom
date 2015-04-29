@@ -25,6 +25,7 @@
 						<a class="letras" href="#">Letras</a>
 					</li >
 					<li>
+						<label class="slider-label">Volumen</label>
 						<input class="slider-range" type="range" min="0" max="1" value="1" step="0.1" />
 					</li>
 				</ul>

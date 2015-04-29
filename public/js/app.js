@@ -10,6 +10,16 @@ $.fn.reset = function() {
 
 var app = {
 
+	mousex: {},
+
+	mousey: {},
+
+	/* Result Set Table DataTables */
+
+	canciones: {},
+
+	/*+++++++++++++++++++++++++++++*/
+
 	chosen : {
 		'.chosen-select'           : {width:"100%"},
     '.chosen-select-deselect'  : {allow_single_deselect:true},

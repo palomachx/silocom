@@ -9,3 +9,4 @@
 	<script type="text/javascript" src="public/bower_components/chosen_v1.4.1/chosen.jquery.min.js"></script>
 	<script type="text/javascript" src="public/bower_components/chosen_v1.4.1/chosen.proto.min.js"></script>
 	<script type="text/javascript" src="public/third_party/wavesurfer.min.js"></script>
+	<script type="text/javascript" src="public/third_party/jquery.nicescroll.min.js"></script>

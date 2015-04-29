@@ -41,6 +41,7 @@ html {
 p {
 	font-family: 'Open Sans', sans-serif !important;
 	font-size: 12px;
+	position: relative;
 }
 
 /* span + span {
@@ -61,7 +62,7 @@ a, button {
 	overflow:hidden;
 	overflow-x:hidden;
 	overflow-y:hidden;
-	height:100%;
+	height:90%;
 	width:100%;
 	position:absolute;
 	top:0px;
@@ -179,8 +180,8 @@ a, button {
 	border: 1px solid #CC215A;
 	border-radius: 3px;
 	font-size: 15px;
-	padding: 7px 20px;
-	color: #CC215A !important;
+	padding: 7px 20px !important;
+	color: #CC215A;
 	position: absolute;
 	right: 0;
 	text-transform: uppercase;
@@ -190,8 +191,12 @@ a, button {
 	text-decoration: none !important;
 }
 
+.btn-outline-static {
+	position: relative !important;
+}
+
 .btn-outline:hover {
-	background: #CC215A;
+	background: #CC215A !important;
 	color: #EDEDED !important;
 }
 
@@ -300,12 +305,16 @@ a, button {
 }
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-	color: #B6B6B6 !important;
+	color: #B6B6B6;
 }
 
-.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li.item>a {
   text-shadow: 0 -1px 0 rgba(0,0,0,.25);
   color: #A67384 !important;
+}
+
+.nav>li {
+	position: inherit;
 }
 
 .navbar-twitch > .container .full-nav {
@@ -551,7 +560,7 @@ a, button {
 	border-bottom-left-radius: 0px !important;
 }
 
-/* PACE 
+/* PACE
 
 .pace-running .s4-loader{
     zoom:1;
@@ -667,17 +676,130 @@ button.zone i {
 
 /* Range type */
 
-.slider-range {
+.slider-range, .slider-label {
   position: absolute;
   width: 90px !important;
   top: 32px;
   right: 35px;
 }
 
-.letras {
-  position: absolute;
-  top: 24px;
-  left: 45px;
+.slider-label {
+	right: 105px;
+  top: 25px;
+  color: #777777;
+}
+
+a.letras {
+	position: absolute;
+	top: 28px;
+	text-decoration: none !important;
+	left: 45px;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+a.letras:hover {
+	color: #777777 !important;
+}
+
+.label-top {
+	border-bottom: 1px solid #1C1C1F;
+  box-shadow: 0px 1px #292A2D;
+  padding-bottom: 10px;
+}
+
+.label-top span {
+	color: #939393;
+	text-transform: uppercase;
+}
+
+.no-data {
+	margin-top: 10px;
+	padding-top: 50px;
+	line-height: 24px;
+	text-align: center;
+}
+
+.button-playlist {
+	background: #2A2B2F;
+	height: 59px;
+	margin: -25px;
+	padding: 9px 20px;
+	position: absolute;
+	width: 100%;
+	bottom: 95px;
+}
+
+.nav-playlist {
+	overflow-y: scroll;
+}
+
+.nav-playlist li {
+	padding-bottom: 5px;
+}
+
+.nav-playlist li > a.atem {
+	background: #2A2B2F;
+	color: #939393 !important;
+	padding: 20px 20px;
+	font-size: 12px;
+	position: relative;
+	padding-left: 70px;
+}
+
+.nav-playlist li > a.atem:hover {
+  background: #1C1D1F !important;
+}
+
+.nav-playlist >li > a {
+	border-radius: 2px !important:
+}
+
+.icons-playlist {
+	position: absolute;
+	left: 25px;
+	top: 19px;
+	font-size: 21px;
+}
+
+.nicescroll-rails {
+	left: initial !important;
+	right: 0 !important;
+}
+
+.nicescroll-cursors {
+	border: 0 !important;
+	margin-right: 2px !important;
+	width: 7px !important;
+}
+
+.header-li {
+	text-align: center;
+	padding-top: 4px;
+	font-size: 11px;
+	color: #1C1C1F !important;
+	text-transform: uppercase;
+}
+
+.dropdown-theme {
+	z-index: 9999 !important;
+}
+
+.dropdown-theme li.divider {
+  background: #2A2A2F;
+}
+
+.dropdown-theme li {
+	color: #919198 !important;
+}
+
+.dropdown-theme li a:hover {
+	background: #2e2e2e;
+	color: #919198 !important;
+}
+
+.dropdown-theme {
+  background: #1C1C1F;
 }
 
 input[type='range'] {
@@ -695,6 +817,7 @@ input[type='range']::-moz-range-track {
 	box-shadow: inset 0 0 5px #333;
 	background-color: #999;
 	height: 10px;
+	cursor: default;
 }
 
 input[type='range']::-webkit-slider-thumb {
@@ -705,6 +828,7 @@ input[type='range']::-webkit-slider-thumb {
 	/*border: 1px solid #999;*/
 	height: 15px;
 	width: 15px;
+	cursor: default;
 }
 
 input[type='range']::-moz-range-thumb {
@@ -715,4 +839,5 @@ input[type='range']::-moz-range-thumb {
 	border: 1px solid #999;
 	height: 20px;
 	width: 20px;
+	cursor: default;
 }
