@@ -89,9 +89,9 @@ globals.music = {
  */
 $(function(){
 
-	/* $(window, document, 'iframe').on('click', function(e) {
+	$(window, document, 'iframe').on('click', function(e) {
 		$('.dropdown').removeClass('open');
-	});*/ 
+	});
 
 	globals.music.init();
 
