@@ -51,9 +51,12 @@ $route['songs/new'] = 'SongsController/newsong';
 $route['songs/all'] = 'SongsController/getallsongs';
 $route['songs/delete/(:num)'] = 'SongsController/delete_song/$1';
 
+$route['playlist/new'] = 'PlaylistController/agregarPlaylist';
+
 $route['singers'] = 'SingersController';
 $route['singers/new'] = 'SingersController/newsinger';
 $route['singers/all'] = 'SingersController/getallsingers';
+$route['singers/delete/(:num)'] = 'SongsController/removeSinger/$1';
 
 $route['users'] = 'UsersController';
 $route['users/new'] = 'UsersController/newuser';

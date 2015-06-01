@@ -22,7 +22,7 @@
 			<div class="col-lg-3 col-md-3 col-sm-3">
 				<ul class="list-inline">
 					<li>
-						<a class="letras" href="#">Letras</a>
+						<!-- <a class="letras" href="#">Letras</a> -->
 					</li >
 					<li>
 						<label class="slider-label">Volumen</label>

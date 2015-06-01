@@ -49,7 +49,7 @@ $(function(){
 
 	/* Seccion para Cantantes */
 
-	var cantantes = $('#singers_table').dataTable({
+	app.cantantes = $('#singers_table').dataTable({
 		/* 'processing': true, */
 		ajax: 'singers/all',
 		columns: [
@@ -61,6 +61,22 @@ $(function(){
 	$('#singer_registre').on('click', function(e) {
 		e.preventDefault();
 		app.getSingerResponse($('#new_singer').serialize());
+	});
+
+	$('#singers_table tbody').on('mousemove', 'tr', function(e) {
+		app.mousex = window.parent.globals.music.mousex(e);
+		app.mousey = window.parent.globals.music.mousey(e);
+	});
+
+	$('#singers_table tbody').on('contextmenu', 'tr', function(e) {
+		var target_row = $(this).get(0);
+		var row_pos = app.cantantes.fnGetPosition(target_row);
+		window.parent.globals.music.activateNormalDropdownArtista(app.mousex, app.mousey, app.cantantes.fnGetData(this));
+		// console.log(row_pos);
+		window.parent.globals.music.current_table = app.cantantes;
+		window.parent.globals.music.row_pos = row_pos;
+		// app.canciones.fnDeleteRow(row_pos);
+		return false;
 	});
 
 	/* Secccion para Canciones */

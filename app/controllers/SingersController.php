@@ -60,6 +60,21 @@ class SingersController extends CI_Controller {
     }
   }
 
+  public function deleteSinger($id_singer) {
+    $result = $this->SingersModel->removeSinger($id_song);
+    if($result){
+      echo json_encode(array(
+        'success' => true,
+        'message' => 'Canción eliminada correctamente.'
+      ));
+    }else{
+      echo json_encode(array(
+        'success' => false,
+        'message' => 'Ocurrio un problema al realizar la petición.'
+      ));
+    }
+  }
+
 }
 
 /* End of file SingersController.php */

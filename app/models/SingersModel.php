@@ -23,4 +23,15 @@ class SingersModel extends CI_Model {
     return $this->db->insert('CI_Artistas', $data);
   }
 
+  public function removeSinger($id_singer) {
+    $this->db->where('art_id', $id_singer);
+    $query = $this->db->get('CI_Detalle_Canción');
+    if($query->num_rows() > 0){
+      return false;
+    }else{
+      $this->db->where('art_id', $id_singer);
+      return $this->db->delete('CI_Artistas');
+    }
+  }
+
 }

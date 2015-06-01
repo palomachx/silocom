@@ -19,6 +19,28 @@
 		<a class="close-notify close" data-dismiss="alert" aria-label="Close" href="#"><span class="icon-cross"></span></a>
 	</div> -->
 
+	<!-- A Modal -->
+	<div id="modal-create-playlist" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Nueva Playlist</h4>
+				</div>
+				<div class="modal-body">
+					<form id="form_save">
+						<div class="form-group">
+							<input id="playname" class="form-control" type="text" name="model_playlist" placeholder="Nombre de la Playlist">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+					<button id="btnSavePlaylist" type="button" class="btn btn-primary">Guardar Playlist</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <?php $this->load->view('templates/global.php'); ?>
 <?php $this->load->view('templates/scripts.php'); ?>
 <?php $this->load->view('templates/musicjs.php'); ?>

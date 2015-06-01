@@ -17,4 +17,12 @@ class PlaylistModel extends CI_Model {
 		}
 	}
 
+	public function add_new_playlist($nombre) {
+		$data = array(
+			'play_name' => $nombre,
+			'us_username' => $this->session->userdata('username')
+			);
+		return $this->db->insert('CI_Playlist', $data);
+	}
+
 }

@@ -65,8 +65,25 @@ globals.music = {
 		// console.log(globals.music.data_row);
 	},
 
+	activateNormalDropdownArtista: function(x, y, row) {
+		$('.dropdown_art').addClass('open');
+		$('#dropdown-art').css('left', x).css('top', y);
+		$('#edit_art').attr('data-id', row.art_id);
+		$('#remove_art').attr('data-id', row.art_id);
+		globals.music.data_row = row;
+	},
+
 	desactivatedropdown: function() {
 		$('.dropdown').removeClass('open');
+	},
+
+	desactivatedNormalArtista: function() {
+		$('.dropdown_art').removeClass('open');
+	},
+
+	/** Create a Playlist **/
+	modal: function(modal_elementid) {
+		$(modal_elementid).modal();
 	},
 
 	notification: function(label, message, type, effect) {
@@ -91,6 +108,7 @@ $(function(){
 
 	$(window, document, 'iframe').on('click', function(e) {
 		$('.dropdown').removeClass('open');
+		$('.dropdown_art').removeClass('open');
 	});
 
 	globals.music.init();
@@ -120,7 +138,7 @@ $(function(){
 		// globals.music.load('public/uploads/18 - ZerypheshTwilight.mp3');
 	});
 
-	/* Eventos para Dropdown */
+	/* Eventos para Dropdown Canciones*/
 
 	$('a#edit-song').on('click', function(e){
 		e.preventDefault();
@@ -141,6 +159,37 @@ $(function(){
 			'Position': globals.music.row_pos,
 			'DataRow': globals.music.data_row
 		});
+	});
+
+	/** Playlist **/
+
+	$('#btn-create-playlist').on('click', function(e) {
+		e.preventDefault();
+		globals.music.modal('#modal-create-playlist');
+	});
+
+	$('#btnSavePlaylist').on('click', function(e) {
+		e.preventDefault();
+		if($('#playname').val() != ''){
+			$.ajax({
+				url: 'playlist/new',
+				dataType: 'json',
+				type: 'POST',
+				data: $('#form_save').serialize()
+			}).done(function (response) {
+				globals.music.notification('Enhorabuena', 'La playlist se agrego correctamente. Espere un momento ...', 'bounceIn', 'success');
+				$('#modal-create-playlist').modal('hide');
+				setTimeout(function() {
+					location.href = '/';
+				}, 3500);
+				$('#playname').val('');
+			}).fail(function(jqXHR, textStatus){
+				console.log('Request: ' + JSON.stringify(jqXHR) + ' : ' + textStatus);
+			});
+		} else {
+			globals.music.notification('Aviso', 'Verifique los campos', 'bounceIn', 'warning');
+		}
+		
 	});
 
 	/************************/
