@@ -15,6 +15,25 @@ class PlaylistController extends CI_Controller {
   	}
   }
 
+  public function agregarPlaylist() {
+    $nombre = $this->input->post('model_playlist');
+    $result = $this->PlaylistModel->add_new_playlist($nombre);
+    if($result) 
+    {
+      echo json_encode(array(
+        'success' => true,
+        'message' => 'Playlist agregada correctamente'
+        ));
+    }
+    else
+    {
+      echo json_encode(array(
+        'success' => false,
+        'message' => 'Hubo un problema al agregar la playlist'
+        ));
+    }
+  }
+
 }
 
 

@@ -25,7 +25,7 @@
               </p>
             <?php endif; ?>
             <div class="button-playlist">
-              <a href="#" class="btn btn-outline btn-outline-static col-lg-12">Crear una Playlist</a>
+              <a id="btn-create-playlist" href="#" class="btn btn-outline btn-outline-static col-lg-12">Crear una Playlist</a>
             </div>
           </li>
         </ul>
@@ -34,10 +34,10 @@
   </div>
   <div class="dropdown">
     <ul id="dropdown-playlist" class="dropdown-menu dropdown-theme" role="menu">
-      <?php if(empty($lista)): ?>
+      <?php if(!empty($lista->data)): ?>
+        <li class="header-li"><b>Agregar a</b></li>
+        <li class="divider"></li>
         <?php foreach($lista->data as $row): ?>
-          <li class="header-li"><b>Agregar a</b></li>
-          <li class="divider"></li>
           <li>
             <a data-id-playlist="<?=$row['play_id']?>" href="#"><?=$row['play_name']?></a>
           </li>
@@ -49,7 +49,7 @@
         </li>
       <?php endif; ?>
       <li>
-        <a id="edit-song" data-id-song="" href="#">Editar</a>
+        <!-- <a id="edit-song" data-id-song="" href="#">Editar</a> -->
       </li>
       <li>
         <a id="remove-song" data-id-song="" href="#">Eliminar</a>

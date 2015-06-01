@@ -81,6 +81,11 @@ globals.music = {
 		$('.dropdown_art').removeClass('open');
 	},
 
+	/** Create a Playlist **/
+	modal: function(modal_elementid) {
+		$(modal_elementid).modal();
+	},
+
 	notification: function(label, message, type, effect) {
 		var html = "<div class='notify alert animated " + effect + " " + type + "' role='alert'><div class='main-notify'>"
 								+ "<h6 class='label-notify'>" + label + "</h6><p class='notify-info'>" + message + "</p></div>"
@@ -154,6 +159,37 @@ $(function(){
 			'Position': globals.music.row_pos,
 			'DataRow': globals.music.data_row
 		});
+	});
+
+	/** Playlist **/
+
+	$('#btn-create-playlist').on('click', function(e) {
+		e.preventDefault();
+		globals.music.modal('#modal-create-playlist');
+	});
+
+	$('#btnSavePlaylist').on('click', function(e) {
+		e.preventDefault();
+		if($('#playname').val() != ''){
+			$.ajax({
+				url: 'playlist/new',
+				dataType: 'json',
+				type: 'POST',
+				data: $('#form_save').serialize()
+			}).done(function (response) {
+				globals.music.notification('Enhorabuena', 'La playlist se agrego correctamente. Espere un momento ...', 'bounceIn', 'success');
+				$('#modal-create-playlist').modal('hide');
+				setTimeout(function() {
+					location.href = '/';
+				}, 3500);
+				$('#playname').val('');
+			}).fail(function(jqXHR, textStatus){
+				console.log('Request: ' + JSON.stringify(jqXHR) + ' : ' + textStatus);
+			});
+		} else {
+			globals.music.notification('Aviso', 'Verifique los campos', 'bounceIn', 'warning');
+		}
+		
 	});
 
 	/************************/
