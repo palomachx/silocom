@@ -34,19 +34,25 @@
   </div>
   <div class="dropdown">
     <ul id="dropdown-playlist" class="dropdown-menu dropdown-theme" role="menu">
-      <?php foreach($lista->data as $row): ?>
-        <li class="header-li"><b>Agregar a</b></li>
-        <li class="divider"></li>
+      <?php if(empty($lista)): ?>
+        <?php foreach($lista->data as $row): ?>
+          <li class="header-li"><b>Agregar a</b></li>
+          <li class="divider"></li>
+          <li>
+            <a data-id-playlist="<?=$row['play_id']?>" href="#"><?=$row['play_name']?></a>
+          </li>
+          <li class="divider"></li>
+        <?php endforeach; ?>
+      <?php else: ?>
         <li>
-          <a data-id-playlist="<?=$row['play_id']?>" href="#"><?=$row['play_name']?></a>
+          <a href="#!" style="color: #5D5D64 !important;">No hay playlist disponibles</a>
         </li>
-        <li class="divider"></li>
-        <li>
-          <a id="edit-song" data-id-song="" href="#">Editar</a>
-        </li>
-        <li>
-          <a id="remove-song" data-id-song="" href="#">Eliminar</a>
-        </li>
-      <?php endforeach; ?>
+      <?php endif; ?>
+      <li>
+        <a id="edit-song" data-id-song="" href="#">Editar</a>
+      </li>
+      <li>
+        <a id="remove-song" data-id-song="" href="#">Eliminar</a>
+      </li>
     </ul>
   </div>

@@ -14,7 +14,10 @@ var app = {
 
 	mousey: {},
 
+ 	/* DataTables Definition */
 	canciones: {},
+	cantantes: {}, 
+	/* ********************* */
 
 	chosen : {
 		'.chosen-select'           : {width:"100%"},

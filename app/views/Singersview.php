@@ -3,7 +3,7 @@
 <body class="graystrong">
   <!-- <?php $this->load->view('templates/navbar') ?> -->
   <div class="clearfix"></div>
-  <div class="container-fluid left-sidebar s3-loader">
+  <div class="container-fluid left-sidebar s3-loader container-datas">
     <div class="row">
       <div class="col-lg-12">
         <h1 class="title-section">Artistas <a href="#!" class="btn-outline" data-toggle="modal" data-target="#newsinger">Agregar un Nuevo artista</a></h1>
@@ -53,4 +53,5 @@
   <!-- End Modal Structure -->
 
 <?php $this->load->view('templates/scripts.php'); ?>
+<?php $this->load->view('templates/silocom.php'); ?>
 <?php $this->load->view('templates/footer') ?>
